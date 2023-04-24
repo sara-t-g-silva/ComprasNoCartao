@@ -1,6 +1,6 @@
 package br.com.alura.models;
 
-public class Compras {
+public class Compras implements Comparable<Compras>{
 
     private String descricao;
     private double valor;
@@ -22,5 +22,10 @@ public class Compras {
     public String toString() {
         return "Compras : descricao " + descricao +
                 ", valor = " + valor ;
+    }
+
+    @Override
+    public int compareTo(Compras outraCompra) {
+        return Double.valueOf(this.valor).compareTo(Double.valueOf(outraCompra.valor));
     }
 }
