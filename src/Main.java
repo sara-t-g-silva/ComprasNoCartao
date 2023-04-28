@@ -9,6 +9,9 @@ import static java.util.Collections.sort;
 public class Main {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
+        
+        //testando
+        
         System.out.println("Digite o limite do cartão: ");
         double limite = leitura.nextDouble();
         CartaoDeCredito cartao = new CartaoDeCredito(limite);
@@ -18,8 +21,8 @@ public class Main {
             System.out.println("Digite a descrição da compra:");
             String descricao = leitura.next();
 
-            System.out.println("Digite o valor da compra:");
-            double valor = leitura.nextDouble();
+            //System.out.println("Digite o valor da compra:");
+            //double valor = leitura.nextDouble();
 
             Compras compra = new Compras(descricao, valor);
             boolean compraRealizada = cartao.lancarCompra(compra);
